@@ -1,0 +1,25 @@
+
+	/* =Import Style */
+	@import url("ui.css");
+	@import url("typho.css");
+
+
+	/* =Reset */
+	body {margin: 0; background: #66abb2; }
+
+	article, aside, header, hgroup, footer, section {display: block; }
+
+	ul, ol {list-style: none; padding: 0; margin: 0; }
+
+	form {padding: 20px; }
+	#list-contents form {padding: 0 10px; }
+	form>ul>li {margin: 0 0 5px; }
+
+	#list-contents {width: 250px; position: absolute; left: 0; bottom: 0; top: 0; background: #aaa; }
+	#list-contents .header,
+	#setting .header {
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#ddd), to(#aaa)); }
+
+	#container {background: #ccc; min-height: 100%; position: relative; z-index: 2; }
+	#setting {width: 250px; position: absolute; right: 250px; bottom: 0; top: 0; background: #aaa; }
+

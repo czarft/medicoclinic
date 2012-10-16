@@ -1,0 +1,76 @@
+ <div id="procedure-page"  >	
+    <nav id="tabs">
+      <ul>
+        <li class="recent">RECENT</li>
+        <li class="present">PRESENT Rx</li>
+      </ul>
+    </nav>
+    <div class="entry">
+    	<div class="toggle-list">
+	        <form><input type="text"  id="procedure-search-field"  placeholder="TYPE PROCEDURE NAME/CODE or SELECT HERE"> 
+	        	<input class="add-icn" type="submit" value="+" data-role="none"></form>
+	         <div id="procedure-list-search">
+	          <ul>
+	            <li><a href="#">LAB008 : Lipid profile (choles,Trigly, HDL,LDL)</a></li>	                    
+	            <li id="procedure-search-field-loading" class="loading"><img src="images/icons/loading.png" alt="">&nbsp;&nbsp;<span>Loading Procedure...</span></li>
+	          </ul>
+	         </div>
+	      </div>
+    	<div class="toggle-form">
+    	  <input type="hidden" id="serviceId" />
+    	  <input type="hidden" id="serviceItemId" />
+    	  <input type="hidden" id="serviceItemCoverageTypeId" />
+    	  <input type="hidden" id="serviceItemCostTypeId" />
+    	  <input type="hidden" id="serviceDetailId" />
+    	  <input type="hidden" id="dfDrId" /> <!-- not use now -->
+		  <form>
+		        <header>
+			        <ul>
+			          <li>LAB008</li>
+			          <li>Lipid profile (choles,Trigly, HDL,LDL)</li>
+			        </ul>
+		        </header>
+		          <ul>
+		            <li><input type="text" value="1" id="serviceItemAmount">AMT</li>
+					<li><input type="text" value="250" id="serviceItemPrice"> THB</li>
+		          </ul>
+		  </form>
+		  
+          <div style="width: 100%; margin-top: 20px;">
+	          <div style="float: left; ">
+	          	<input type="button" id="procedure-save-btt" style="border-radius:0px;" value="SAVE"/>          	
+	          </div>
+	          <div style="float: left; margin-left: 20px;">
+	          	<input type="button"  id="procedure-cancel-btt"  style="border-radius:0px;" value="CANCEL" />
+	          </div>
+          </div>
+      </div>
+      <div class="recent-present">
+        <table cellpadding="0" cellspacing="0">
+        <tr>
+          <th>&nbsp;</th>
+          <td>
+            
+          </td>
+        </tr>
+        
+        </table>
+        
+        <ul>
+          <li>
+            <p class="delete-btn">Delete</p>    
+            <h2 style="float: left;">AMBUFEN600 : bufen 600mg </h2>            
+            <h2 style="float: right;">10 เม็ด</h2>
+            <br/>
+            <p style="float: left;">sig: กินเช้ากลางวันเย็น หลังอาหาร</p>
+            <p style="float: right;">100 บาท</p>
+            <br/>
+          </li>
+          
+        </ul>
+      </div>
+      
+    </div>
+</div>
+    
+   

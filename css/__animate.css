@@ -1,0 +1,82 @@
+/* =Add Account */
+	.overlay {
+	background: rgba(0,0,0,0.5);
+	display: none;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%; }
+
+		.overlay>a {
+		height: 100%;
+		overflow: hidden;
+		position: absolute;
+		text-indent: -999px;
+		width: 100%;
+		z-index: 1; }
+
+		.overlay:target {display: block; }
+
+		.overlay:target div#login {
+	    -webkit-animation: scaleDown 1.2s ease-in-out;
+	    animation: scaleDown 1.2s ease-in-out; }
+
+		@-webkit-keyframes scaleDown {
+		  0% { -webkit-transform: scale(2,2); opacity: 0; }
+		  50% { -webkit-transform: scale(1,1); opacity: 1; }
+		}
+		
+		/*@keyframes scaleDown {
+		  0% { transform: scale(10,10); opacity: 0; }
+		  100% { transform: scale(1,1); opacity: 1; }
+		}
+		*/
+
+
+	#toggle-list div,
+	#toggle-list-in div {height: 0; opacity: 0; }
+	#toggle-list.target div,
+	#toggle-list-in.target div {height: inherit; opacity: 1; -webkit-animation: historyDown 1.2s; }
+		@-webkit-keyframes historyDown {
+	 	 0% {opacity: 0; }
+		 50% {opacity: 1; }
+		}
+	
+	.loading img {margin-right: 5px; -webkit-animation: rotaTion 1s linear infinite; }
+		@-webkit-keyframes rotaTion {
+		  0% { -webkit-transform: rotate(0deg); }
+		  100% { -webkit-transform: rotate(360deg); }
+		}
+		
+		
+		
+	.panel {-webkit-perspective: 600px; position: relative; margin: 0 auto; width: 415px; z-index: 100; }
+		
+		/* -- make sure to declare a default for every property that you want animated -- */
+		/* -- general styles, including Y axis rotation -- */
+		.panel .front {
+		-webkit-transform: rotateY(0deg);
+		-webkit-transform-style: preserve-3d;
+		-webkit-backface-visibility: hidden;
+		-webkit-transition: all .4s ease-in-out;
+		transition: all .4s ease-in-out; }
+			
+		.panel.flip .front {z-index: 900; -webkit-transform: rotateY(180deg);}
+		
+		.panel .back {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 800;
+		-webkit-transform: rotateY(-180deg);
+		-webkit-transform-style: preserve-3d;
+		-webkit-backface-visibility: hidden;  			
+		/* -- transition is the magic sauce for animation -- */
+		-webkit-transition: all .4s ease-in-out;
+		transition: all .4s ease-in-out; }
+		
+		.panel.flip .back {z-index: 1000; -webkit-transform: rotateY(0deg);	-moz-transform: rotateY(0deg); }
+		
+		
+		
